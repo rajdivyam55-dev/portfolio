@@ -398,3 +398,300 @@ html[data-theme="light"] .section-alt { background: rgba(255,255,255,.34); }
   .footer-content { display: grid; align-items: start; }
   .eclipse { width: 90vw; top: 35%; }
 }
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  padding: .78rem .2rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.social-link:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent-bright);
+}
+
+.digital-clock {
+  position: fixed;
+  top: 92px;
+  right: 1.2rem;
+  z-index: 20;
+  min-width: 132px;
+  padding: .65rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.18);
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  pointer-events: none;
+}
+.clock-label {
+  display: block;
+  color: var(--accent-bright);
+  font-size: .52rem;
+  letter-spacing: .14em;
+  margin-bottom: .15rem;
+}
+.clock-time {
+  display: block;
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.clock-date {
+  display: block;
+  color: var(--muted);
+  font-size: .52rem;
+  margin-top: .12rem;
+}
+@media (max-width: 640px) {
+  .digital-clock {
+    top: 78px;
+    right: .7rem;
+    min-width: 116px;
+    padding: .5rem .6rem;
+  }
+  .clock-time { font-size: .8rem; }
+}
+
+/* Enhanced hover animations */
+.nav-links a,
+.contact-links a,
+.social-link,
+.btn,
+.theme-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::after,
+.contact-links a::after,
+.social-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-bright);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease;
+}
+
+.nav-links a:hover::after,
+.contact-links a:hover::after,
+.social-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.contact-links a,
+.social-link {
+  transition: transform .25s ease, color .25s ease, border-color .25s ease,
+              background .25s ease, box-shadow .25s ease;
+}
+
+.contact-links a:hover,
+.social-link:hover {
+  transform: translateY(-4px);
+  color: var(--accent-bright);
+  border-color: rgba(192,132,252,.5);
+  background: rgba(168,85,247,.08);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.btn {
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: brightness(1.08);
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+.card,
+.project-card,
+.timeline-card,
+.certificate-card,
+.experience-box,
+.info-panel {
+  transition: transform .35s cubic-bezier(.2,.8,.2,1),
+              border-color .35s ease,
+              box-shadow .35s ease,
+              background .35s ease;
+}
+
+.card:hover,
+.project-card:hover,
+.timeline-card:hover,
+.certificate-card:hover,
+.experience-box:hover,
+.info-panel:hover {
+  transform: translateY(-8px);
+  border-color: rgba(192,132,252,.45);
+  box-shadow: 0 25px 70px var(--shadow);
+}
+
+.skill-index,
+.project-number {
+  transition: transform .3s ease, letter-spacing .3s ease;
+}
+
+.card:hover .skill-index,
+.project-card:hover .project-number {
+  transform: translateX(5px);
+  letter-spacing: .28em;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .contact-links a,
+  .social-link,
+  .btn,
+  .theme-toggle,
+  .card,
+  .project-card,
+  .timeline-card,
+  .certificate-card,
+  .experience-box,
+  .info-panel {
+    transition: none;
+  }
+}
+
+/* Universal text hover animation across the portfolio */
+.section h2,
+.section h3,
+.hero h1,
+.eyebrow,
+.card-kicker,
+.panel-label,
+.timeline-year,
+.location,
+.skill-index,
+.project-number,
+.focus-item,
+.copy-block p,
+.card p,
+.project-card p,
+.project-card li,
+.experience-box p,
+.certificate-card p,
+.footer h2,
+.footer-note,
+.footer-bottom,
+.boot-status,
+.hero-intro {
+  transition: color .28s ease, transform .28s ease, text-shadow .28s ease,
+              letter-spacing .28s ease;
+}
+
+.section h2:hover,
+.section h3:hover,
+.hero h1:hover,
+.eyebrow:hover,
+.card-kicker:hover,
+.panel-label:hover,
+.timeline-year:hover,
+.location:hover,
+.skill-index:hover,
+.project-number:hover,
+.focus-item:hover,
+.copy-block p:hover,
+.card p:hover,
+.project-card p:hover,
+.project-card li:hover,
+.experience-box p:hover,
+.certificate-card p:hover,
+.footer h2:hover,
+.footer-note:hover,
+.footer-bottom:hover,
+.hero-intro:hover {
+  color: var(--accent-bright);
+  transform: translateX(4px);
+  text-shadow: 0 0 18px var(--eclipse-glow);
+}
+
+.hero h1:hover {
+  transform: translateX(5px);
+}
+
+.eyebrow:hover,
+.card-kicker:hover,
+.panel-label:hover,
+.skill-index:hover,
+.project-number:hover {
+  letter-spacing: .22em;
+}
+
+.focus-item:hover,
+.project-card li:hover {
+  transform: translateX(7px);
+}
+
+.brand {
+  transition: transform .3s ease, letter-spacing .3s ease, text-shadow .3s ease;
+}
+
+.brand:hover {
+  transform: translateX(4px);
+  letter-spacing: .16em;
+  text-shadow: 0 0 18px var(--eclipse-glow);
+}
+
+.contact-links a,
+.social-link,
+.nav-links a {
+  transition: color .28s ease, transform .28s ease, text-shadow .28s ease;
+}
+
+.contact-links a:hover,
+.social-link:hover,
+.nav-links a:hover {
+  transform: translateY(-3px);
+  color: var(--accent-bright);
+  text-shadow: 0 0 14px var(--eclipse-glow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section h2,
+  .section h3,
+  .hero h1,
+  .eyebrow,
+  .card-kicker,
+  .panel-label,
+  .timeline-year,
+  .location,
+  .skill-index,
+  .project-number,
+  .focus-item,
+  .copy-block p,
+  .card p,
+  .project-card p,
+  .project-card li,
+  .experience-box p,
+  .certificate-card p,
+  .footer h2,
+  .footer-note,
+  .footer-bottom,
+  .hero-intro,
+  .brand,
+  .contact-links a,
+  .social-link,
+  .nav-links a {
+    transition: none;
+  }
+}

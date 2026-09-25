@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <div class="digital-clock" id="digitalClock" aria-label="Current local time">
+    <span class="clock-label">LOCAL TIME</span>
+    <span class="clock-time">00:00:00</span>
+    <span class="clock-date">---</span>
+  </div>
+
   <!-- Animated eclipse live wallpaper: CSS/DOM only, no background photo. -->
   <div class="wallpaper" aria-hidden="true">
     <div class="stars"></div>
@@ -67,6 +73,8 @@
         </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">Explore work</a>
+          <a class="social-link" href="https://www.linkedin.com/in/divyam-raj-1323892a8" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="social-link" href="https://github.com/rajdivyam55-dev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
 
@@ -223,6 +231,8 @@
       <div class="contact-links">
         <a href="mailto:rajdivyam@gmail.com">Email</a>
         <a href="https://www.instagram.com/divyam_raj_bhumi?" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/divyam-raj-1323892a8" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/rajdivyam55-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
     <div class="container footer-bottom">DEVION © <span id="year"></span> · SYSTEM READY</div>
@@ -249,6 +259,29 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    // Live digital clock
+    const digitalClock = document.getElementById("digitalClock");
+    const clockTime = digitalClock.querySelector(".clock-time");
+    const clockDate = digitalClock.querySelector(".clock-date");
+
+    function updateClock() {
+      const now = new Date();
+      clockTime.textContent = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+      });
+      clockDate.textContent = now.toLocaleDateString([], {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      }).toUpperCase();
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
 
     // Startup terminal sequence: system ready -> developer online.......... -> welcome to devion
     const bootScreen = document.getElementById("bootScreen");
