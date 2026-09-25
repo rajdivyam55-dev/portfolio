@@ -2,7 +2,9 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#08050f" />
+  <meta name="color-scheme" content="dark light" />
   <title>Divyam Raj | Devion Portfolio</title>
   <meta name="description" content="Divyam Raj — developer portfolio focused on Python, AI, web design and practical projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +46,15 @@
   <header class="hero" id="home">
     <nav class="nav container" aria-label="Primary navigation">
       <a href="#home" class="brand">DEVION<span>.</span></a>
-      <div class="nav-links">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </div>
@@ -260,6 +266,22 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
+
+    // Responsive mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("nav-open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      });
+      navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+        navLinks.classList.remove("nav-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }));
+    }
 
     // Live digital clock
     const digitalClock = document.getElementById("digitalClock");
