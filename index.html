@@ -1,206 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divyam Raj | Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio of Divyam Raj, a software developer passionate about Python, Artificial Intelligence, and web design."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="nav container" aria-label="Primary navigation">
-        <a href="#home" class="brand">Divyam Raj</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divyam Raj | Devion Portfolio</title>
+  <meta name="description" content="Divyam Raj — developer portfolio focused on Python, AI, web design and practical projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <div class="hero-background"></div>
-      <div class="hero-content container" id="home">
-        <div class="hero-text">
-          <p class="eyebrow">Software Developer</p>
-          <h1><strong>I build</strong> AI-powered web experiences that <span>solve real problems.</span></h1>
-          <p class="intro">
-            <span>I design and develop clean Python applications, AI workflows, and modern web interfaces.</span>
-            <span>I enjoy turning learning into tangible projects with clear user value.</span>
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Let’s Connect</a>
-          </div>
-          <p class="hero-note">
-            Open to internships and project work.
-            <a href="#projects" class="hero-link">Click here to explore my work.</a>
-          </p>
+<body>
+  <!-- Animated eclipse live wallpaper: CSS/DOM only, no background photo. -->
+  <div class="wallpaper" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="eclipse">
+      <span class="eclipse-corona"></span>
+      <span class="eclipse-sun"></span>
+      <span class="eclipse-moon"></span>
+    </div>
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+  </div>
+
+  <!-- Startup animation -->
+  <div class="boot-screen" id="bootScreen" aria-live="polite">
+    <div class="boot-window">
+      <div class="boot-topbar"><span></span><span></span><span></span></div>
+      <div class="boot-line"><span class="prompt">devion@portfolio:~$</span> <span id="bootText"></span><span class="cursor">▋</span></div>
+      <div class="boot-status" id="bootStatus">Initializing interface...</div>
+    </div>
+  </div>
+
+  <header class="hero" id="home">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="brand">DEVION<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
+        <span class="theme-icon">☾</span><span class="theme-label">Light</span>
+      </button>
+    </nav>
+
+    <div class="hero-content container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">SYSTEM / DEVELOPER</p>
+        <h1>Building digital experiences with <span>code & curiosity.</span></h1>
+        <p class="hero-intro">
+          I’m Divyam Raj — a developer exploring Python, artificial intelligence,
+          responsive web design, and practical technology projects.
+        </p>
+        <div class="hero-terminal">
+          <span class="terminal-dot"></span>
+          <span>system ready</span>
+          <span class="terminal-separator">/</span>
+          <span>developer online..........</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore work</a>
         </div>
       </div>
-    </header>
 
-    <main>
-      <section class="section container" id="about">
+      <div class="hero-orb reveal">
+        <div class="orb-ring ring-a"></div>
+        <div class="orb-ring ring-b"></div>
+        <div class="orb-core">
+          <span>DR</span>
+        </div>
+        <p>DEVION // ONLINE</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>A developer who likes turning ideas into useful interfaces.</h2>
+      </div>
+      <div class="split-grid">
+        <div class="copy-block">
+          <p>I am a motivated software developer with a strong interest in Python, artificial intelligence, and web design. I enjoy solving real problems, learning new technologies, and turning ideas into useful digital experiences.</p>
+          <p>I am currently focused on building clean interfaces, improving my AI skills, and creating projects that show both technical ability and thoughtful design.</p>
+        </div>
+        <div class="info-panel">
+          <div class="panel-label">CURRENT FOCUS</div>
+          <div class="focus-item">Python & practical software</div>
+          <div class="focus-item">Artificial intelligence</div>
+          <div class="focus-item">Modern web interfaces</div>
+          <div class="focus-item">Problem solving</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal" id="education">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Curious, motivated, and always learning.</h2>
+          <p class="eyebrow">02 / EDUCATION</p>
+          <h2>Learning journey.</h2>
         </div>
-        <div class="about-grid">
-          <div>
-            <p>
-              I am a motivated software developer with a strong interest in Python,
-              artificial intelligence, and web design. I enjoy solving real problems,
-              learning new technologies, and turning ideas into useful digital experiences.
-            </p>
-            <p>
-              I am currently focused on building clean interfaces, improving my AI skills,
-              and creating projects that show both technical ability and thoughtful design.
-            </p>
-          </div>
-          <div class="about-card">
-            <p><strong>What I do best</strong></p>
-            <ul>
-              <li>Build AI and Python-powered solutions</li>
-              <li>Design modern and responsive web layouts</li>
-              <li>Keep work clean, fast, and easy to understand</li>
-            </ul>
-            <p class="about-cta">
-              <a href="#contact" class="about-link">Click here to contact me and discuss your next project.</a>
-            </p>
-          </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-year">2017 — 2025</span>
+            <div class="timeline-card">
+              <p class="card-kicker">SECONDARY EDUCATION</p>
+              <h3>Kendriya Vidyalaya Sangathan</h3>
+              <p>Secondary education</p>
+              <span class="location">Patna, Bihar</span>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2025 — 2028</span>
+            <div class="timeline-card">
+              <p class="card-kicker">CURRENT STUDIES</p>
+              <h3>Govt. Polytechnic College</h3>
+              <p>Diploma in Computer Science and Engineering</p>
+              <span class="location">Supaul, Bihar · 2025 — 2028</span>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section section-alt" id="skills">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>What I bring to the table.</h2>
-          </div>
-          <div class="skills-grid">
-            <div class="card">
-              <h3>💻 Python</h3>
-              <p>Strong interest in Python and building practical solutions.</p>
-            </div>
-            <div class="card">
-              <h3>🤖 Artificial Intelligence</h3>
-              <p>Exploring AI concepts and real-world applications.</p>
-            </div>
-            <div class="card">
-              <h3>🎨 Web Design</h3>
-              <p>Focused on clean layouts, creativity, and user experience.</p>
-            </div>
-            <div class="card">
-              <h3>🧠 Problem Solving</h3>
-              <p>Approaching challenges with curiosity and a growth mindset.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section class="section container reveal" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">03 / SKILLS</p>
+        <h2>Tools, interests and strengths.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="card"><span class="skill-index">01</span><h3>Python</h3><p>Building practical solutions and strengthening programming fundamentals.</p></article>
+        <article class="card"><span class="skill-index">02</span><h3>Artificial Intelligence</h3><p>Exploring AI concepts and real-world applications.</p></article>
+        <article class="card"><span class="skill-index">03</span><h3>Web Design</h3><p>Focused on clean layouts, creativity, responsiveness and user experience.</p></article>
+        <article class="card"><span class="skill-index">04</span><h3>Problem Solving</h3><p>Approaching technical challenges with curiosity and a growth mindset.</p></article>
+      </div>
+    </section>
 
-      <section class="section container" id="projects">
+    <section class="section section-alt reveal" id="projects">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
+          <p class="eyebrow">04 / PROJECTS</p>
           <h2>Selected work and learning experience.</h2>
         </div>
         <div class="projects-grid">
           <article class="project-card">
+            <div class="project-number">01</div>
+            <p class="card-kicker">AI / INTERNSHIP</p>
             <h3>AI Internship Project</h3>
-            <p>
-              Gained practical exposure to Artificial Intelligence through an internship
-              experience focused on learning and project-based understanding.
-            </p>
-            <ul>
-              <li>Explored AI concepts and applications</li>
-              <li>Strengthened technical understanding</li>
-              <li>Improved confidence in technology-driven work</li>
-            </ul>
+            <p>Gained practical exposure to Artificial Intelligence through an internship experience focused on learning and project-based understanding.</p>
+            <ul><li>Explored AI concepts and applications</li><li>Strengthened technical understanding</li><li>Improved confidence in technology-driven work</li></ul>
           </article>
-
           <article class="project-card">
+            <div class="project-number">02</div>
+            <p class="card-kicker">UI / FRONT-END</p>
             <h3>Web Design Concept</h3>
-            <p>
-              Designed a modern web interface with attention to layout, aesthetics,
-              and user experience.
-            </p>
-            <ul>
-              <li>Focused on visual appeal and clarity</li>
-              <li>Improved creative design thinking</li>
-              <li>Built a stronger understanding of front-end presentation</li>
-            </ul>
+            <p>Designed a modern web interface with attention to layout, aesthetics, and user experience.</p>
+            <ul><li>Focused on visual appeal and clarity</li><li>Improved creative design thinking</li><li>Built stronger front-end presentation skills</li></ul>
           </article>
-
           <article class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>
-              Created this portfolio to display my skills, brand, and progress in a polished way.
-            </p>
-            <ul>
-              <li>Built with animation, responsive layout, and premium styling</li>
-              <li>Designed to clearly communicate skills and contact actions</li>
-              <li>Shows practical work and continuous learning</li>
-            </ul>
+            <div class="project-number">03</div>
+            <p class="card-kicker">PERSONAL / PORTFOLIO</p>
+            <h3>Devion Portfolio</h3>
+            <p>Created this portfolio to display skills, projects, education, certificates and progress in a polished way.</p>
+            <ul><li>Responsive layout and motion design</li><li>Dark/light theme support</li><li>Interactive eclipse-inspired visual system</li></ul>
           </article>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="experience">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Growing through hands-on opportunities.</h2>
-          </div>
-          <div class="experience-box">
-            <h3>Artificial Intelligence Internship</h3>
-            <p class="meta">Practical learning experience</p>
-            <p>
-              Worked on AI-related learning, developed a stronger understanding of the
-              field, and built confidence through exposure to real-world technical concepts.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer" id="contact">
-      <div class="container footer-content">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s build something great together.</h2>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:rajdivyam@gmail.com">Email</a>
-          <a
-            href="https://www.instagram.com/divyam_raj_bhumi?"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a href="#projects" class="btn btn-card">Click Here for Projects</a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('a.btn-card[href^="http"]').forEach((link) => {
-          link.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.open(link.href, '_blank', 'noopener');
-          });
-        });
+    <section class="section container reveal" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">05 / EXPERIENCE</p>
+        <h2>Growing through hands-on opportunities.</h2>
+      </div>
+      <div class="experience-box">
+        <div>
+          <p class="card-kicker">ARTIFICIAL INTELLIGENCE INTERNSHIP</p>
+          <h3>Practical learning experience</h3>
+        </div>
+        <p>Worked on AI-related learning, developed a stronger understanding of the field, and built confidence through exposure to real-world technical concepts.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal" id="certificates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">06 / CERTIFICATES</p>
+          <h2>Credentials & proof of learning.</h2>
+        </div>
+        <div class="certificate-layout">
+          <div class="certificate-card">
+            <p class="card-kicker">UPLOADED CERTIFICATE</p>
+            <h3>Divyam Raj Certificate</h3>
+            <p>The provided certificate is included below as a built-in document preview.</p>
+            <a class="btn btn-primary" href="certificate.pdf" target="_blank" rel="noopener noreferrer">Open certificate</a>
+          </div>
+          <div class="certificate-preview">
+            <object data="certificate.pdf" type="application/pdf" aria-label="Divyam Raj certificate PDF">
+              <p>Certificate preview is unavailable in this browser. Use the button to open the PDF.</p>
+            </object>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer reveal" id="contact">
+    <div class="container footer-content">
+      <div>
+        <p class="eyebrow">07 / CONTACT</p>
+        <h2>Let’s build something meaningful.</h2>
+        <p class="footer-note">Available for learning opportunities, internships and project work.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:rajdivyam@gmail.com">Email</a>
+        <a href="https://www.instagram.com/divyam_raj_bhumi?" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">DEVION © <span id="year"></span> · SYSTEM READY</div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("devion-theme");
+    if (savedTheme) root.dataset.theme = savedTheme;
+
+    function updateThemeButton() {
+      const light = root.dataset.theme === "light";
+      themeToggle.querySelector(".theme-icon").textContent = light ? "☀" : "☾";
+      themeToggle.querySelector(".theme-label").textContent = light ? "Dark" : "Light";
+      themeToggle.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+    }
+    updateThemeButton();
+
+    themeToggle.addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+      localStorage.setItem("devion-theme", root.dataset.theme);
+      updateThemeButton();
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Startup terminal sequence: system ready -> developer online.......... -> welcome to devion
+    const bootScreen = document.getElementById("bootScreen");
+    const bootText = document.getElementById("bootText");
+    const bootStatus = document.getElementById("bootStatus");
+    const bootLines = [
+      ["system ready", "Core interface initialized."],
+      ["developer online..........", "Connection established."],
+      ["welcome to devion", "Entering portfolio."]
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeBootLine() {
+      if (lineIndex >= bootLines.length) {
+        bootStatus.textContent = "Launching Devion...";
+        setTimeout(() => {
+          bootScreen.classList.add("boot-complete");
+          document.body.classList.add("site-ready");
+        }, 650);
+        return;
+      }
+
+      const [line, status] = bootLines[lineIndex];
+      if (charIndex < line.length) {
+        bootText.textContent += line[charIndex++];
+        setTimeout(typeBootLine, 45);
+      } else {
+        bootStatus.textContent = status;
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(() => {
+          bootText.textContent = "";
+          typeBootLine();
+        }, 650);
+      }
+    }
+
+    window.addEventListener("load", () => setTimeout(typeBootLine, 350));
+
+    // Section reveal animation
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
       });
-    </script>
-  </body>
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => observer.observe(item));
+  </script>
+</body>
 </html>
